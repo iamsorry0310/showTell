@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix-clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="head">
+        <!-- create a nav bar -->
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="#">Show + Tell</a>
+            </div>
+            <div class="navbar-right">
+                <a href="#work">Work</a>
+                <a href="#studio">Studio</a>
+                <a href="#services">Services</a>
+                <a href="#sectors">Sectors</a>
+                <a href="#insights">Insights</a>
+                <a href="#careers">Careers</a>
+
+                <button class="start-project">Start Project</button>
+                <button class="send-button"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.70711 1.29289C9.09763 0.902372 9.09763 0.367816 8.70711 0.077298C8.31659 -0.213179 7.78203 -0.213179 7.39151 0.077298L2.39151 5.07729C2.00099 5.36782 2.00099 5.90237 2.39151 6.29289L7.39151 11.2929C7.78203 11.5834 8.31659 11.5834 8.70711 11.2929C9.09763 10.9024 9.09763 10.3678 8.70711 10.0773L3.70711 5.07729C3.51659 4.88677 3.51659 4.51323 3.70711 4.32271L8.70711 1.29289Z"
+                            fill="white" />
+                    </svg><span class="arrow-right"></span></button>
+            </div>
+        </div>
+    </section>
+    <div class="main-div">
+        <!-- <div class="marquee"> -->
+        <!-- <p>This is an infinite circular rotation effect for text.</p> -->
+        <!-- </div> -->
+        <div class="left-div">
+            <p>A Digital-first branding & web product<br> agency expertlycreating impactful<br>
+                experiences for high-growth brands.<br>
+            </p>
+        </div>
+        <div class="right-div">
+            <img src="image-2.webp" alt="Image">
+        </div>
+    </div>
+    <section class="text-data">
+        <div class="text-div">
+            <p>
+                Show + Tell is a
+                <span class="data">DIGITAL-FIRST</span> branding and technology<br> agency.
+                enabling companies to conect with their<br> audience. extend their reach and enjoy greater
+                <br>
+                <span class="data">COMMERCIAL</span>SUCCESS<br>
+            </p>
+        </div>
+
+        <div>
+            <p class="work"><span>Work<sup style="font-size: 2rem !important;">04</sup></span></p>
+
+        </div>
+    </section>
+    <section class="bottom">
+        <div class="cards-container">
+            <div class="card">
+                <img src="image-1.webp" alt="Image 1">
+                <div class="card-buttons">
+                    <button class="card-button">Optient</button>
+                    <button class="card-button">Branding</button>
+                    <button class="card-button">Web & Digital</button>
+                    <button class="card-button">Energy & Utilities</button>
+                  </div>
+                <p class="card-text">Embarcing the Digital Age :Optinet's Quest for <br>
+                brand & digital Transformmation
+                </p>
+            </div>
+            <div class="card">
+                <img src="image-2.webp" alt="Image 2">
+                <div class="card-buttons">
+                    <button class="card-button">Dention</button>
+                    <button class="card-button">Web & Digital </button>
+                    <button class="card-button">Properity</button>
+                  </div>
+                <p class="card-text">Digital trnasformation for a leading office and <br>interior company  </p>
+            </div>
+            <div class="card">
+                <img src="image-3.webp" alt="Image 3">
+                <div class="card-buttons">
+                    <button class="card-button">Equinax</button>
+                    <button class="card-button">Web & Digital</button>
+                    <button class="card-button">SaaS</button>
+                  </div>
+                <p class="card-text">transforming Intellectual Property Management through Cutting-Edge Digital Innovation</p>
+            </div>
+            <div class="card">
+                <img src="image-4.webp" alt="Image 4">
+                <div class="card-buttons">
+                    <button class="card-button">Atlas Venture</button>
+                    <button class="card-button">Invesments</button>
+                  </div>
+                <p class="card-text">Pioneering Pathways:Atlas Ventures+'s Digital Evolution in Biotech</p>
+            </div>
+        </div>
+    </section>
+    <section class="fotter">
+
+    </section>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const carouselButtons = document.querySelectorAll('.carousel-button');
+
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            carouselImages.style.transform = `translateX(-${index * 100}%)`;
+            carouselButtons.forEach((button, i) => {
+                button.classList.remove('active');
+                if (i === index) {
+                    button.classList.add('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % carouselButtons.length;
+            showImage(currentImageIndex);
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + carouselButtons.length) % carouselButtons.length;
+            showImage(currentImageIndex);
+        }
+
+        carouselButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                currentImageIndex = index;
+                showImage(currentImageIndex);
+            });
+        });
+
+        setInterval(nextImage, 5000); // Change the interval to change the image every 5 seconds
+    </script>
+
+
+
+
+</body>
+
+
+</html>

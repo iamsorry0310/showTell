@@ -1,0 +1,290 @@
+
+
+/* Add this at the beginning of your CSS file */
+
+/* Mobile devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+       flex-direction: column;
+     }
+   
+    .navbar-left,
+    .navbar-right {
+       width: 100%;
+       text-align: center;
+     }
+   
+    .navbar-right {
+       margin-top: 10px;
+     }
+   
+    .main-div {
+       flex-direction: column;
+     }
+   
+    .left-div,
+    .right-div {
+       width: 100%;
+     }
+   
+    .text-data {
+       flex-direction: column;
+     }
+   
+    .text-div {
+       margin-bottom: 20px;
+     }
+   
+    .cards-container {
+       grid-template-columns: 1fr;
+     }
+   }
+   
+   /* Tablet devices (portrait tablets and large phones, 600px - 900px) */
+   @media only screen and (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+       flex-direction: column;
+     }
+   
+    .navbar-left,
+    .navbar-right {
+       width: 100%;
+       text-align: center;
+     }
+   
+    .navbar-right {
+       margin-top: 10px;
+     }
+   
+    .main-div {
+       flex-direction: column;
+     }
+   
+    .left-div,
+    .right-div {
+       width: 100%;
+     }
+   
+    .text-data {
+       flex-direction: column;
+     }
+   
+    .text-div {
+       margin-bottom: 20px;
+     }
+   
+    .cards-container {
+       grid-template-columns: 1fr 1fr;
+     }
+   }
+   
+   /* Desktop devices (laptops/desktops, 901px and up) */
+       .navbar {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background-color: snow;
+       padding: 10px;
+   }
+   
+   .navbar-left,.navbar-right {
+       display: flex;
+       align-items: center;
+   }
+   
+   .navbar-left{
+       font-size: 2rem;
+   }
+   
+   .navbar a {
+       color: black;
+       text-decoration: none;
+       margin-right: 20px;
+   }
+   
+   .navbar a:hover {
+       color: #ddd;
+   }
+   
+   .navbar-buttons {
+       display: flex;
+       align-items: center;
+   }
+   
+   .start-project {
+       background-color: black;
+       color: white;
+       border: none;
+       padding: 10px 20px;
+       border-radius: 10px;
+       margin-right: 10px;
+       cursor: pointer;
+   }
+   
+   .send-button {
+       background-color: #333;
+       color: #f2f2f2;
+       border: none;
+       padding: 10px 20px;
+       border-radius: 80%;
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+   }
+   
+   .main-div {
+       width: 100%;
+       height: 500px;
+       background-color: #f2f2f2;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+   }
+   /*  */
+   /* .marquee { */
+       /* width: 100%; */
+       /* height: 50px; */
+       /* overflow: hidden; */
+       /* position: relative; */
+   /* } */
+   /*  */
+   /* .marquee p { */
+       /* display: block; */
+       /* width: 100%; */
+       /* height: 100%; */
+       /* margin: 0; */
+       /* line-height: 50px; */
+       /* text-align: center; */
+       /* animation: marquee 10s linear infinite; */
+       /* font-size: 2rem; */
+   /* } */
+   /*  */
+   /* @keyframes marquee { */
+       /* 0% { */
+           /* transform: translateX(0); */
+       /* } */
+       /* 100% { */
+           /* transform: translateX(-100%); */
+       /* } */
+   /* } */
+   /*  */
+   .left-div,.right-div {
+       width: 50%;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: flex-end;
+   }
+   
+   .left-div p {
+       text-align: center;
+       font-size: 2rem;
+   }
+   
+   .right-div img {
+   
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+   
+   .text-div {
+       width: 100%;
+       height: 300px;
+       background-color: #f2f2f2; /* You can change the background color */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+   
+   .text-div p {
+       text-align: center;
+       font-size: 3rem; /* You can change the font size */
+       line-height: 1.5; /* You can change the line height */
+   }
+   
+   .data{
+       font-size: 3rem;
+       border: 2px solid black ;
+       border-radius: 10%;
+   }
+   .work{
+       width: 100%;
+       height: 400px;
+       background-color: #f2f2f2; /* You can change the background color */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       text-align: center;
+       font-size: 15rem; /* You can change the font size */
+       line-height: 1.5; /* You can change the line height */  
+   }
+   .cards-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     height: 400px;
+     background-color: #f2f2f2; /* You can change the background color */
+     padding: 20px;
+   }
+   
+   .card {
+     width: 20%;
+     height: 100%;
+     background-color: white;
+     border-radius: 10px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px;
+   }
+   
+   .card img {
+     width: 100%;
+     height: 60%;
+     object-fit: cover;
+   }
+   
+   .card-button {
+     background-color: black;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 10px;
+     margin-top: 10px;
+     cursor: pointer;
+   }
+   
+   .card-text {
+     text-align: center;
+     font-size: 1rem;
+     line-height: 1.5;
+     margin-top: 10px;
+   }
+   
+   .card-buttons {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     margin-top: 10px;
+   }
+   
+   .card-button {
+     background-color: white;
+     color: black;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 10px;
+     cursor: pointer;
+     border-radius: 40%;
+     border: 2px solid black;
+     font-size: 10px;
+   }
+   
